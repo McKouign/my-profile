@@ -12,6 +12,7 @@ html{
 
 body{
   background: #111222;
+  text-align: justify;
 }
 
 section{
@@ -34,6 +35,7 @@ section{
 .main-title{
   font-size: 4em;
   margin-bottom: 50px;
+  margin-top: 16px;
 }
 
 .name{
@@ -127,6 +129,10 @@ section{
 .list-infos li{
   list-style: none;
   font-size: 1.2em;
+}
+
+.fa-solid{
+  color: #FFB000;
 }
 
 .list-infos li:not(:last-child){
