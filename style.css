@@ -12,6 +12,7 @@ html{
 
 body{
   background: #111222;
+  text-align: justify;
 }
 
 section{
@@ -143,4 +144,8 @@ section{
 
 .sec-03{
   margin-bottom: 50px;
+}
+
+.fa-solid{
+  color: #FFB000;
 }
