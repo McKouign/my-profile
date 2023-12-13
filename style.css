@@ -234,4 +234,9 @@ section{
   .info-title {
     font-size: 1.2em; /* Ajuster la taille de la police pour les sous-titres */
   }
+
+  .list-infos {
+    margin-left: -40px;
+    margin-bottom: 40px;
+  }
 }
