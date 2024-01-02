@@ -163,84 +163,195 @@ section {
   object-fit: cover;
 }
 
-@media screen and (max-width: 600px) {
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer horizontalement */
-    justify-content: center; /* Centrer verticalement */
-    margin-left: 180px;
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 20px; /* Ajout de marges sur les côtés */
   }
 
-  .media-icons {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px; /* Ajuster la marge pour l'espacement */
-  }
-
-  .media-icons a {
-    margin: 40px 0; /* Espacement entre chaque icône */
-  }
-
-  section {
-    padding: 40px; /* Réduire la marge intérieure pour les écrans plus petits */
-    margin: 20px 0;
-    align-items: center;
-    justify-content: center; /* Ajouter une marge extérieure autour de chaque section */
-  }
-
-  .content {
-    flex-direction: column; /* Passer à une disposition en colonne pour les écrans plus petits */
-    text-align: center;
-    align-items: center;
-    justify-content: center; /* Centrer le texte sous l'image */
-  }
-
-  .content .image,
-  .content .info {
-    width: 600px; /* Ajuster la largeur pour remplir la largeur de l'écran */
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center; /* Ajouter de l'espace entre l'image et le texte */
-  }
-
-  .content .image .profile-pic {
-    border-radius: 60%;
-    margin-left: 120px; /* Conserver la bordure ronde même dans les media queries */
-  }
-
-  .project-pic {
-    margin-left: 48px;
-    max-width: 560px;
-  }
-
-  .content .text-box {
-    max-width: 50%; /* Ajuster la largeur pour remplir la largeur de l'écran */
-    padding: 20px; /* Ajuster les marges intérieures pour plus de compacité */
-    margin-bottom: 40px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 140px;
+  .container,
+  .content,
+  .text-box,
+  .info,
+  .list-infos {
+    padding: 40px 20px; /* Ajustement des paddings pour éviter le contact avec les bords */
   }
 
   .main-title {
-    font-size: 2em; /* Ajuster la taille de la police pour le titre principal */
+    font-size: 3em; /* Diminution de la taille de la police */
+    text-align: center;
   }
 
   .name {
-    font-size: 1.8em; /* Ajuster la taille de la police pour le nom */
+    font-size: 2em; /* Diminution de la taille de la police */
+    margin-bottom: 20px; /* Ajustement de la marge */
+    text-align: center;
   }
 
-  .section-title {
-    font-size: 1.4em; /* Ajuster la taille de la police pour les titres de section */
+  .sec-01 .container .image {
+    text-align: center; /* Centrage horizontal du conteneur */
   }
 
+  .sec-01 .container .image .profile-pic {
+    transform: translateX(-45%); /* Ajustement du décalage horizontal */
+    left: 50%; /* Positionnement horizontal au centre */
+    width: 350px; /* Réduction de la largeur */
+    height: 350px;
+  }
+
+  .sec-01 .container .text-box {
+    width: 80%; /* Réduire la largeur pour créer des marges latérales */
+    max-width: 600px; /* Taille maximale pour limiter la largeur sur de plus grands écrans */
+    font-size: 1.1em;
+  }
+
+  .content {
+    flex-direction: column; /* Affichage en colonnes pour les éléments de contenu */
+  }
+
+  .image,
+  .text-box,
+  .info,
+  .list-infos {
+    width: 100%; /* Prend toute la largeur disponible */
+    margin-bottom: 30px; /* Espacement entre les éléments */
+  }
+
+  .profile-pic,
+  .project-pic,
+  video {
+    width: 100%; /* Ajustement de la largeur des images et vidéos */
+    height: auto; /* Pour conserver les proportions */
+  }
+
+  .media-icons {
+    margin-top: 50px; /* Ajustement de la marge */
+  }
+
+  .media-icons a {
+    font-size: 2em; /* Diminution de la taille de la police */
+    margin: 30px; /* Espacement entre les icônes */
+  }
+
+  .section-title,
   .info-title {
-    font-size: 1.2em; /* Ajuster la taille de la police pour les sous-titres */
+    font-size: 1.5em; /* Diminution de la taille de la police */
+    margin-bottom: 50px; /* Ajustement de la marge */
   }
 
   .list-infos {
-    margin-left: -40px;
-    margin-bottom: 40px;
+    width: auto; /* Ajustement de la largeur */
+    margin-left: 0; /* Suppression de la marge gauche */
+  }
+}
+
+/* Téléphones mobiles */
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 0 10px; /* Marges plus petites sur les côtés */
+  }
+
+  .main-title {
+    font-size: 2.5em; /* Diminution de la taille de la police */
+    text-align: center;
+    margin-right: 90px;
+  }
+
+  .name {
+    font-size: 1.8em; /* Diminution de la taille de la police */
+    margin-bottom: 15px; /* Ajustement de la marge */
+    text-align: center;
+    margin-right: 100px;
+  }
+
+  .sec-01 .container .image {
+    text-align: center; /* Centrage horizontal du conteneur */
+  }
+
+  .sec-01 .container .image .profile-pic {
+    transform: translateX(-65%); /* Ajustement du décalage horizontal */
+    left: 50%; /* Positionnement horizontal au centre */
+    width: 300px; /* Réduction de la largeur */
+    height: 300px;
+  }
+
+  .sec-01 .container .text-box {
+    width: 90%; /* Réduire la largeur pour créer des marges latérales */
+    max-width: 400px; /* Taille maximale pour limiter la largeur sur de plus grands écrans */
+    font-size: 1em;
+    padding-left: 60px;
+    padding-left: 60px;
+    margin-top: -80px;
+  }
+
+  .sec-01 .container .text-box h3 {
+    font-size: 1.5em; /* Réduction légère de la taille du titre */
+    text-align: center;
+  }
+  .sec-01 .container .text-box h4 {
+    text-align: center;
+  }
+
+  .sec-02 .container {
+    max-width: 10%; /* Réduire la largeur du conteneur */
+    margin: 0 auto; /* Centrer le conteneur */
+  }
+
+  .sec-02 .section-title {
+    font-size: 1.5em; /* Réduire légèrement la taille du titre */
+    margin-bottom: 30px; /* Ajouter un espacement inférieur */
+    text-align: center;
+    margin-right: 100px;
+    margin-top: -80px;
+  }
+
+  .sec-02 .container .image img.project-pic {
+    width: 320px; /* Réduire la largeur de l'image */
+    height: 260px;
+    margin-left: 274px;
+    padding-top: -80px;
+  }
+
+  .sec-02 .container .info {
+    width: 30%; /* Réduire la largeur pour ajouter des marges */
+    margin-right: 144px;
+    margin-top: -120px;
+  }
+
+  .sec-02 .container .info h4 {
+    text-align: center;
+  }
+
+  .sec-03 .container {
+    max-width: 40%; /* Réduire la largeur du conteneur */
+    margin: 0 auto; /* Centrer le conteneur */
+  }
+
+  .sec-03 .section-title {
+    font-size: 1.5em; /* Réduire légèrement la taille du titre */
+    margin-bottom: 30px; /* Ajouter un espacement inférieur */
+    text-align: center;
+    margin-right: 100px;
+    margin-top: -180px;
+  }
+
+  .text-box,
+  .info,
+  .list-infos {
+    padding: 20px 10px; /* Ajustement des paddings */
+  }
+
+  .media-icons {
+    margin-top: 30px; /* Ajustement de la marge */
+  }
+
+  .media-icons a {
+    font-size: 1.5em; /* Diminution de la taille de la police */
+    margin: 20px; /* Espacement entre les icônes */
+  }
+
+  .section-title,
+  .info-title {
+    font-size: 1.2em; /* Diminution de la taille de la police */
+    margin-bottom: 40px; /* Ajustement de la marge */
   }
 }
